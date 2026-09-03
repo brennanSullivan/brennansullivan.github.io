@@ -1,29 +1,25 @@
-<head>
-  <style>
-      body {
-          margin: 0;
-          font-family: var(--fontSans);
-      }
-      a:hover {
-          color: red;
-      }
-      .about-section {
-          text-align: justify;
-          margin: 0 auto;
-          color: black;
-          font-size: 1em;
-          margin-bottom: 0; /* Ensure no extra margin at the bottom */
-          padding-bottom: 0; /* Ensure no extra padding at the bottom */
-      }
-      .about-section p {
-          margin-top: 0.5rem;
-          margin-bottom: 0; /* Ensure no extra margin at the bottom */
-      }
-  </style>
-</head>
+<style>
+    .about-section {
+        text-align: justify;
+        margin: 0 auto;
+        color: black;
+        font-size: 1em;
+        margin-bottom: 0; /* Ensure no extra margin at the bottom */
+        padding-bottom: 0; /* Ensure no extra padding at the bottom */
+    }
+    .about-section p {
+        margin-top: 0.5rem;
+        margin-bottom: 0; /* Ensure no extra margin at the bottom */
+    }
+    .about-section p + p {
+        margin-top: 1rem;
+    }
+    .about-section a:hover {
+        color: red;
+    }
+</style>
 
-<body>
-  <div class="about-section">
-    <p>My primary research interest is to identify biophysical mechanisms underlying learning in the brain. Currently, I am a Neuroscience Ph.D. candidate working with <a href="https://www.hhmi.org/scientists/jeffrey-c-magee">Jeff Magee</a> at Baylor College of Medicine. For more information, refer to <a href="https://brennansullivan.info/cv.pdf">my CV</a>.</p>
-  </div>
-</body>
+<div class="about-section">
+  <p>I am a postdoc with <a href="https://www.neuro.duke.edu/research/faculty-labs/nuo-li-lab">Nuo Li</a> at Duke Neurobiology, where I focus on motor learning. Previously, I completed my Ph.D. with <a href="https://www.hhmi.org/scientists/jeffrey-c-magee">Jeff Magee</a> at Baylor College of Medicine, where I used in vivo whole-cell recording in behaving mice to investigate rapid, dendritic plateau-dependent plasticity in neocortical pyramidal neurons.</p>
+  <p>My long-term goal is to understand how the brain can modify itself through experience to produce adaptive behavior. I approach this problem by investigating how neocortical neurons process their inputs, modify their own input&ndash;output relationship, and generate outputs that drive learning. There are three primary motivations for pursuing this problem: to advance knowledge, to accelerate rational treatments for neuropsychiatric disease, and to inspire new designs for intelligent systems.</p>
+</div>
