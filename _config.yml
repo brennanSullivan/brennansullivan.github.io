@@ -1,14 +1,14 @@
 # Your name and what you do
-name: Brennan Sullivan
-bio: "Postdoc | Nuo Li Lab | Duke Neurobiology"
+name: Brennan Sullivan, PhD
+bio: "Postdoc | Nuo Li Lab | Duke"
 
-description: cv
+description: "Postdoc in Nuo Li's lab at Duke Neurobiology studying the neural and biophysical basis of motor learning. PhD with Jeff Magee at Baylor College of Medicine."
 
 # Profile picture
 picture: assets/images/me.jpeg
 
 # your url: http://USERNAME.github.io
-url: https://brennanSullivan.github.io
+url: https://brennansullivan.info
 
 # do you want to display social media links? true or false
 social-media: true
