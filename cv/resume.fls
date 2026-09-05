@@ -42,6 +42,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/needspace/needspace.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/needspace/needspace.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
@@ -59,7 +61,6 @@ OUTPUT resume.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
-OUTPUT resume.xdv
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -70,4 +71,5 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+OUTPUT resume.xdv
 INPUT resume.aux

@@ -24,10 +24,18 @@
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
 \usepackage{fontspec}
-\setmainfont[BoldFont=Publico Text Semibold]{Publico Text}
+% TeX Gyre Pagella ships in the TeX tree, not the macOS font book, so fontspec
+% cannot find it by name -- load it by filename instead.
+\setmainfont{texgyrepagella}[
+  Extension      = .otf,
+  UprightFont    = *-regular,
+  BoldFont       = *-bold,
+  ItalicFont     = *-italic,
+  BoldItalicFont = *-bolditalic]
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{needspace} % Keeps a section heading from being orphaned at a page break
 \pagestyle{plain} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
@@ -69,8 +77,8 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+    \centerline{\namesize\bf \@name}
+    \nameskip
   \endgroup
 }
 
@@ -96,10 +104,13 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
+  \needspace{5\baselineskip} % Never leave the heading alone at the foot of a page
   \sectionskip
   #1 % Section title
   \sectionlineskip
   \hrule height 2pt% Horizontal line
+  \nobreak
+  \vspace{0.2\baselineskip}% breathing room between rule and first entry
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{0em} % Margin within the section
   }

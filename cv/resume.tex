@@ -13,15 +13,22 @@
 %----------------------------------------------------------------------------------------
 \documentclass{resume} % Use the custom resume.cls style
 \usepackage{enumitem}
-\usepackage[left=0.75in,top=0.75in,right=0.75in,bottom=0.75in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\usepackage[left=0.6in,right=0.6in,top=0.6in,bottom=0.6in]{geometry} % Document margins
+\emergencystretch=2em % lets tight lines stretch instead of running past the margin
+% Entries are separated by an explicit \vspace{0.3\baselineskip}; without this the
+% blank line between them adds a second, larger gap on top of it.
+\setlength{\parskip}{0pt plus 1pt}
 \name{Brennan J. Sullivan, PhD} % Your name
-\address{brennansullivan.info | sullibrenn at gmail.com} % Your phone number and email
+\address{brennansullivan.info | brennan.sullivan@duke.edu} % Your phone number and email
 
 % Redefine the section heading format
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{} % Adjust the format here
+\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.3\baselineskip}
+% rSection typesets its own heading and never calls \section, so the titlesec
+% lines above are inert here. These two hooks are what actually set the gaps:
+\def\sectionskip{\vspace{0.8\baselineskip}}      % space above a section title
+\def\sectionlineskip{\vspace{0.1\baselineskip}}  % space between title and rule
 
 \begin{document}
 
@@ -30,31 +37,29 @@
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{{\bfseries Education}}
- 
-    {\bfseries Baylor College of Medicine} \hfill { 2021 - 2026}
-    \\ Ph.D. — Neuroscience
-    \\ Advisor: Jeff Magee \vspace{0.3\baselineskip}
-    
-    {\bfseries Rhodes College} \hfill { 2013 - 2017  }
-    \\ B.S. — Neuroscience
-    \\ Advisor: Kelly Dougherty 
-    \end{rSection}
+
+    {\bfseries PhD, Neuroscience, Baylor College of Medicine} \hfill {2021 - 2026}
+\\ Dissertation: \emph{Testing dendritic plateau potential-dependent plasticity in neocortex}
+\\ Advisor: Jeff Magee \vspace{0.3\baselineskip}
+
+    {\bfseries BS, Neuroscience, Rhodes College} \hfill {2013 - 2017}
+
+\end{rSection}
 
 
-\begin{rSection}{{\bfseries Research Positions}}
-    
-    {\bfseries Graduate Student | Jeff Magee Lab} \hfill {2022 - 2026}
-    \\ Howard Hughes Medical Institute
-    \\ Duncan Neurological Research Institute, Texas Children's Hospital 
-    \\ Department of Neuroscience, Baylor College of Medicine \vspace{0.3\baselineskip}
+\begin{rSection}{{\bfseries Research Experience}}
+  
+      {\bfseries Postdoctoral Associate, Nuo Li Lab} \hfill {2026 - Present}
+    \\ Duke University School of Medicine \vspace{0.3\baselineskip}
 
-    {\bfseries Research Assistant | Shilpa Kadam Lab} \hfill {2017 - 2021} 
-    \\ Hugo W. Moser Research Institute, Kennedy Krieger Children's Hospital
-    \\ Department of Neurology, Johns Hopkins University School of Medicine \vspace{0.3\baselineskip}
+    {\bfseries PhD Student, Jeff Magee Lab} \hfill {2022 - 2026}
+    \\ Baylor College of Medicine, Howard Hughes Medical Institute \vspace{0.3\baselineskip}
 
-    {\bfseries Undergraduate Research Fellow | Kelly Dougherty Lab} \hfill {2016 - 2017} 
-    \\ Program in Neuroscience
-    \\ Department of Biology, Rhodes College  \vspace{0.3\baselineskip}
+    {\bfseries Research Assistant, Shilpa Kadam Lab} \hfill {2017 - 2021}
+    \\ Kennedy Krieger Institute, Johns Hopkins University School of Medicine \vspace{0.3\baselineskip}
+
+    {\bfseries Undergraduate Research Fellow, Kelly Dougherty Lab} \hfill {2016 - 2017}
+    \\ Rhodes College
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -62,62 +67,54 @@
 %----------------------------------------------------------------------------------------
 \begin{rSection}{{\bfseries Publications}}
 
-    \begin{enumerate}[resume, leftmargin=0pt]
-        \item [] Articles [* denotes equal contribution]
-         \end{enumerate}
+    {\bfseries Articles} [* denotes equal contribution]
 
-    \begin{enumerate}[resume, leftmargin=2em]
-        \item Xiao K.*, Li Y.*, {\bfseries Sullivan B.J.*},  Li. G*, Magee J.C. (2025) Rapid neocortical network modifications via dendritic plateau potential induced plasticity. \emph{bioRxiv}. DOI:10.1101/2025.11.19.689338. 
-        \item Thomas A.*, Yang W.*, Wang C., Tipparaju S.L., Chen G., {\bfseries Sullivan B.J.}, Swiekatowski K., Tatam M., Gerfen C., Li N. (2023) Superior colliculus cell types bidirectionally modulate choice activity in frontal cortex. \emph{Nature Communications} PMID: 37963894
-        \item {\bfseries Sullivan B.J.}, Kipnis P.K., Carter B.M., and Kadam S.D. (2021) Targeting ischemia-induced KCC2 hypofunction rescues refractory neonatal seizures and mitigates epileptogenesis in a mouse model. \emph{Science Signaling}. PMID: 34752143
-        \item {\bfseries Sullivan B.J.}, Ammanuel S., Kipnis P.K., Araki Y., Huganir R.L., and Kadam S.D. (2020) Low-dose Perampanel rescues cortical gamma dysregulation associated with paravalbumin interneuron GluA2 upregulation in epileptic Syngap1+/- mice. \emph{Biological Psychiatry}. PMID: 32107006
-        \item Kipnis P.K.*, {\bfseries Sullivan B.J.*}, Carter B.M., and Kadam S.D. (2020) TrkB agonists prevent post-ischemic BDNF-TrkB mediated emergence of refractory neonatal seizures in CD-1 pups. \emph{JCI Insight}. PMID: 32427585. 
-        \item Kang J., Kadam S.D., Elmore J.S., {\bfseries Sullivan B.J.*}, Valentine H.*, Malla A.P., Grace A.A., Rahmim A., Loew L.M., Baumann M., Gjedde A., Boctor E.M., and Wong D.F. (2020) Transcranial photoacoustic imaging of NMDA-evoked focal circuit dynamics in rat forebrain. \emph{Journal of Neural Engineering}. PMID: 32084654. 
-        \item Carter B.M., {\bfseries Sullivan B.J.}, Landers J.R., Kadam S.D. (2018) Dose-dependent reversal of KCC2 hypofunction and phenobarbital-resistant neonatal seizures by ANA12. \emph{Scientific Reports}. PMID: 30097625
+    \begin{enumerate}[resume, leftmargin=2em, itemsep=2pt, parsep=0pt, topsep=2pt, partopsep=0pt]
+        \item Xiao K.*, Li Y.*, {\bfseries Sullivan B.J.*},  Li G.*, Magee J.C. (2025) Rapid neocortical network modifications via dendritic plateau potential induced plasticity. \emph{bioRxiv} 2025.11.19.689338.
+        \item Thomas A.*, Yang W.*, Wang C., Tipparaju S.L., Chen G., {\bfseries Sullivan B.J.}, Swiekatowski K., Tatam M., Gerfen C., Li N. (2023) Superior colliculus cell types bidirectionally modulate choice activity in frontal cortex. \emph{Nature Communications}. PMID:~37963894.
+        \item {\bfseries Sullivan B.J.}, Kipnis P.K., Carter B.M., Kadam S.D. (2021) Targeting ischemia-induced KCC2 hypofunction rescues refractory neonatal seizures and mitigates epileptogenesis in a mouse model. \emph{Science Signaling}. PMID:~34752143.
+        \item {\bfseries Sullivan B.J.}, Ammanuel S., Kipnis P.K., Araki Y., Huganir R.L., Kadam S.D. (2020) Low-dose perampanel rescues cortical gamma dysregulation associated with parvalbumin interneuron GluA2 upregulation in epileptic Syngap1$^{+/-}$ mice. \emph{Biological Psychiatry}. PMID:~32107006.
+        \item Kipnis P.K.*, {\bfseries Sullivan B.J.*}, Carter B.M., Kadam S.D. (2020) TrkB agonists prevent post-ischemic BDNF-TrkB mediated emergence of refractory neonatal seizures in CD-1 pups. \emph{JCI Insight}. PMID:~32427585.
+        \item Kang J., Kadam S.D., Elmore J.S., {\bfseries Sullivan B.J.*}, Valentine H.*, Malla A.P., Grace A.A., Rahmim A., Loew L.M., Baumann M., Gjedde A., Boctor E.M., Wong D.F. (2020) Transcranial photoacoustic imaging of NMDA-evoked focal circuit dynamics in rat forebrain. \emph{Journal of Neural Engineering}. PMID:~32084654.
+        \item Carter B.M., {\bfseries Sullivan B.J.}, Landers J.R., Kadam S.D. (2018) Dose-dependent reversal of KCC2 hypofunction and phenobarbital-resistant neonatal seizures by ANA12. \emph{Scientific Reports}. PMID:~30097625.
     \end{enumerate}
-    \begin{enumerate}[leftmargin=0pt]
-        \item [] Reviews
-    \end{enumerate}
+    {\bfseries Reviews}
 
-    \begin{enumerate}[resume, leftmargin=2em]
-        \item {\bfseries Sullivan B.J.} and Kadam S.D. (2021) Brain Derived Neurotrophic Factor in Neonatal Seizures. \emph{Pediatric Neurology}. PMID: 33773288 
-        \item Kadam S.D., {\bfseries Sullivan B.J.}, Goayal A., Blue M.E., and Smith-Hicks C. (2020) Rett Syndrome and CDKL5 Deficiency Disorder: From Bench to Clinic. \emph{International Journal of Molecular Sciences}. PMID: 31618813 
-        \item Kipnis P.K., {\bfseries Sullivan B.J.}, and Kadam S.D. (2019) Sex Dependent Signaling Pathways Underlying Seizure Susceptibility and the Role of Chloride Cotransporters. \emph{Cells}. PMID: 31085988
+    \begin{enumerate}[leftmargin=2em, itemsep=2pt, parsep=0pt, topsep=2pt, partopsep=0pt]
+        \item {\bfseries Sullivan B.J.}, Kadam S.D. (2021) Brain Derived Neurotrophic Factor in Neonatal Seizures. \emph{Pediatric Neurology}. PMID:~33773288.
+        \item Kadam S.D., {\bfseries Sullivan B.J.}, Goyal A., Blue M.E., Smith-Hicks C. (2020) Rett Syndrome and CDKL5 Deficiency Disorder: From Bench to Clinic. \emph{International Journal of Molecular Sciences}. PMID:~31618813.
+        \item Kipnis P.K., {\bfseries Sullivan B.J.}, Kadam S.D. (2019) Sex Dependent Signaling Pathways Underlying Seizure Susceptibility and the Role of Chloride Cotransporters. \emph{Cells}. PMID:~31085988.
     \end{enumerate}
 
-    \begin{enumerate}[leftmargin=0pt]
-        \item [] Chapters
-    \end{enumerate}
+    {\bfseries Chapters}
 
-    \begin{enumerate}[resume, leftmargin=2em]
-        \item {\bfseries Sullivan B.J.} and Kadam S.D. (2021) Protocol for Drug Screening with Quantitative Video Electroencephalography in a Translational Model of Refractory Neonatal Seizures. In Experimental and Translational Models to Screen Drugs Effective Against Seizures and Epilepsy. D. Vohora, Ed. Springer, New York
-        \item {\bfseries Sullivan B.J.} and Kadam S.D. (2020) The involvement of neuronal chloride transporter deficiencies in epilepsy. In Neuronal Chloride Transporters in Health and Disease. X. Tang, Ed. Elsevier, Amsterdam, Netherlands.
+    \begin{enumerate}[leftmargin=2em, itemsep=2pt, parsep=0pt, topsep=2pt, partopsep=0pt]
+        \item {\bfseries Sullivan B.J.}, Kadam S.D. (2021) Protocol for Drug Screening with Quantitative Video Electroencephalography in a Translational Model of Refractory Neonatal Seizures. In \emph{Experimental and Translational Models to Screen Drugs Effective Against Seizures and Epilepsy}. D. Vohora, Ed. Springer, New York.
+        \item {\bfseries Sullivan B.J.}, Kadam S.D. (2020) The involvement of neuronal chloride transporter deficiencies in epilepsy. In \emph{Neuronal Chloride Transporters in Health and Disease}. X. Tang, Ed. Elsevier, Amsterdam, Netherlands.
     \end{enumerate}     
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %	INVITED TALKS SECTION
 %----------------------------------------------------------------------------------------
-\begin{rSection}{{\bfseries Invited Talks}}
-    \setlist[enumerate,0] {leftmargin=0pt}
+\begin{rSection}{{\bfseries Oral Presentations}}
+
     {\bfseries Rush and Helen Record Neuroscience Forum, Galveston, TX} \hfill {2025}
-    \\ Baylor College of Medicine Neuroscience Department Annual Retreat
-    \\ \emph{Mechanisms of neuronal feature selectivity in the lateral visual cortex}.
-   \item {\bfseries Johns Hopkins University and Kennedy Krieger Institute, Baltimore, MD} \hfill {2022} 
-   \\ Pediatric Neuroscience Collaboration Seminar, Virtual Live Content Event
-   \\ \emph{Hitting a moving target: KCC2 and pharmacoresistant seizures in the developing brain}.
-   \item  {\bfseries 3rd International SYNGAP1 Conference} \hfill {2021}
-   \\ Young Investigator Workshop, Virtual Live Content Event
-   \\ \emph{An early forecast for the SYNGAP1 storm}.
-   \item {\bfseries 14th European Congress on Epileptology, Geneva, Switzerland} \hfill{2020}
-    \\  Platform session, Cancelled due to COVID-19
-    \\ \emph{The KCC2 functional enhancer CLP290 rescues phenobarbital-resistant neonatal seizures.}
-    \item {\bfseries The Scripps Research Institute, Jupiter, Florida} \hfill{2018}
-    \\ 2nd International SYNGAP1 Conference
-    \\ \emph{Perampanel rescues behavioral state-dependent transitions on qEEG in Syngap1$^{+/-}$ mice.} \vspace{0.3\baselineskip}
-    \item {\bfseries Rhodes College, Memphis, TN} \hfill{2016}
-    \\ Summer Undergraduate Research Symposium
-    \\ \emph{A hitchhikers guide to voltage-gated K$^+$  channels}.
+\\ Baylor College of Medicine Neuroscience Department Annual Retreat
+\\ \emph{Mechanisms of neuronal feature selectivity in the lateral visual cortex.} \vspace{0.3\baselineskip}
+
+    {\bfseries Johns Hopkins University and Kennedy Krieger Institute, Baltimore, MD} \hfill {2022}
+\\ Pediatric Neuroscience Collaboration Seminar (virtual)
+\\ \emph{Hitting a moving target: KCC2 and pharmacoresistant seizures in the developing brain.} \vspace{0.3\baselineskip}
+
+    {\bfseries 3rd International SYNGAP1 Conference} \hfill {2021}
+\\ Young Investigator Workshop (virtual)
+\\ \emph{An early forecast for the SYNGAP1 storm.} \vspace{0.3\baselineskip}
+
+    {\bfseries 2nd International SYNGAP1 Conference, Jupiter, FL} \hfill {2018}
+\\ The Scripps Research Institute
+\\ \emph{Perampanel rescues behavioral state-dependent transitions on qEEG in Syngap1$^{+/-}$ mice.}
+
 \end{rSection}
 
 %--------------------------------------------------------------------------------
@@ -137,33 +134,38 @@
 %    AWARDS SECTION, to become AWARDS and GRANTS 
 %-----------------------------------------------------------------------------------------------
 \begin{rSection}{{\bfseries Awards}}
-    NINDS Curing the Epilepsies Conference Travel Award \hfill {2021}
-    \\ \emph{CURE Epilepsy} 
-   
-   14th European Congress on Epileptology Travel Award \hfill{2020}
-   \\ \emph{International League Against Epilepsy}
-   
-   American Epilepsy Society Annual Meeting Travel Award \hfill{2019}
-   \\ \emph{International League Against Epilepsy}
-   
-   Young Investigator Travel Award \hfill{2019}
-   \\ \emph{Syngap1 Foundation}
-   
-   Undergraduate Research Fellowship \hfill{2016}
-   \\ \emph{Rhodes College}
-       \end{rSection}
+
+    {\bfseries NINDS Curing the Epilepsies Conference Travel Award} \hfill {2021}
+    \\ \emph{CURE Epilepsy} \vspace{0.3\baselineskip}
+
+    {\bfseries 14th European Congress on Epileptology Travel Award} \hfill {2020}
+    \\ \emph{International League Against Epilepsy} \vspace{0.3\baselineskip}
+
+    {\bfseries American Epilepsy Society Annual Meeting Travel Award} \hfill {2019}
+    \\ \emph{International League Against Epilepsy} \vspace{0.3\baselineskip}
+
+    {\bfseries Young Investigator Travel Award} \hfill {2019}
+    \\ \emph{Syngap1 Foundation}
+
+\end{rSection}
 
 %----------------------------------------------------------------------------------------
        %UNIVERSITY SERVICE, should encompass service, outreach, and mentorship 
 %----------------------------------------------------------------------------------------
 \begin{rSection}{{\bfseries Service}}
-Ad-Hoc reviewer for \emph{eLife, BRAIN, Molecular Psychiatry, Journal of Neural Engineering, Epilepsy Research, and Neuropharmacology}
-\item Baylor College of Medicine Neuroscience Program Bootcamp \hfill {2022 - 2025}
-\\ \emph{Lecturer and Volunteer}
-\item NINDS-AES Young Investigators Virtual Seminar \hfill {2021} 
-\\ \emph{Seminar Co-Organizer, Emerging neurotechnology to disrupt epilepsy}
-\item Johns Hopkins Internship in Brain Sciences \hfill{2018 - 2020}
-\\ \emph{Mentor}
+
+    {\bfseries Ad hoc Reviewer}
+    \\ \emph{eLife, BRAIN, Molecular Psychiatry, Journal of Neural Engineering, Epilepsy Research, Neuropharmacology} \vspace{0.3\baselineskip}
+
+    {\bfseries Baylor College of Medicine Neuroscience Program Bootcamp} \hfill {2022 - 2025}
+    \\ \emph{Lecturer and Volunteer} \vspace{0.3\baselineskip}
+
+    {\bfseries NINDS-AES Young Investigators Virtual Seminar} \hfill {2021}
+    \\ \emph{Co-Organizer, Emerging neurotechnology to disrupt epilepsy} \vspace{0.3\baselineskip}
+
+    {\bfseries Johns Hopkins Internship in Brain Sciences} \hfill {2018 - 2020}
+    \\ \emph{Mentor}
+
 \end{rSection}
 % will need teaching section as well in future CVs, need to teach
 \end{document}
