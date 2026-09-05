@@ -1,13 +1,29 @@
+$socialSize: 48px
+$socialIcon: 26px
+
 .social-links
     margin-top: 10px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 4px
 
     > .link
         margin: 0
         text-decoration: none
         position: relative
-        display: inline-block
-        height: 35px
-        width: 35px
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        height: $socialSize
+        width: $socialSize
+        -webkit-tap-highlight-color: transparent
+
+        > .icon
+            width: $socialIcon
+            height: $socialIcon
+            margin: 0
+            transition: all ease-in-out .2s
 
         &:hover
             > .icon
@@ -16,16 +32,16 @@
         &:hover:before
             opacity: 1
             display: inline-block
-            transform: translate3d(0,0,0)
             white-space: nowrap
+            transform: translate3d(-50%,0,0)
 
         &:before
             content: attr(data-title)
             display: none
             position: absolute
-            bottom: -34px
-            left: -6px
-            margin: 0 auto
+            bottom: -47px
+            left: 50%
+            margin: 0
             font-size: 13px
             padding: 3px 10px
             background: $beta
@@ -35,14 +51,15 @@
             line-height: 22px
             opacity: 0
             transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear
-            transform: translate3d(0,-8px,0)
+            transform: translate3d(-50%,-8px,0)
             z-index: 99
 
         &:after
             content: ""
             position: absolute
-            top: 35px
-            left: 13px
+            top: $socialSize
+            left: 50%
+            margin-left: -5px
             width: 0
             height: 0
             border-left: 5px solid transparent
@@ -57,5 +74,8 @@
             opacity: 1
             transform: translate3d(0,0,0)
 
-    > .icon
-        transition: all ease-in-out .2s
+    // Touch devices have no real hover: the tooltip would stick after a tap.
+    @media (hover: none)
+        > .link:before,
+        > .link:after
+            display: none !important
